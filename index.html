@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white; 
+        }
+
+        .round-button {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url('sssa.png');
+            background-size: cover;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        h4 {
+            margin-top: 50px; 
+            text-align: center; 
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h2>Press this for cool animations!</h2>
+    <img src="hand.jpeg" alt="Image" style="width: 150px; height: 300px; border-radius: 50%; transform: rotate(180deg); margin-right: 30px;">
+    <button class="round-button" onclick="playSound()"></button>
+    <audio loop id="sound" src="FUNNY MOANING SOUND.mp3"></audio>
+    <script>
+        function playSound() {
+            var sound = document.getElementById('sound');
+            sound.currentTime = 0; 
+            sound.play(); 
+        }
+    </script>
+    <h4>@Kaii</h4> 
+</body>
+</html>
